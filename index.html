@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  preetham</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/Swimlane/angular-data-table/gh-pages/lib/dataTable.css'>
+<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/Swimlane/angular-data-table/gh-pages/lib/material.css'>
+<link rel='stylesheet prefetch' href='https://fontastic.s3.amazonaws.com/Jnf54BZCm7mSjGCxNRbfp3/icons.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div ng-app="app">
+  <div ng-controller="MyController">
+    Search: <input type="text" ng-model="key" ng-keyup="filter(key)"/>
+    <dtable options="options" rows="data" class="material" on-page="paging(offset, size)" selected="selected" on-row-click="onRowClick(row)" on-select="onSelect(rows)"></dtable>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js'></script>
+<script src='https://swimlane.github.io/angular-data-table/lib/dataTable.helpers.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
